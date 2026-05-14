@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+struct ListNode {
+	int val;
+	ListNode* next;
+	ListNode(int x):val(x),next(nullptr){}
+};
+int main() {
+	//create a linked list: 10->20->30
+	ListNode* head = new ListNode(10);
+	head->next = new ListNode(20);
+	head->next->next = new ListNode(30);
+	//iterate the linked list
+	ListNode* cur = head;
+	while (cur != nullptr) {
+		cout << cur->val << endl;
+		cur = cur->next;
+	}
+
+}
